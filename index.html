@@ -276,7 +276,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-15 01:07:12" itemprop="dateModified" datetime="2021-03-15T01:07:12+08:00">2021-03-15</time>
+        <time title="修改時間：2021-03-15 01:07:48" itemprop="dateModified" datetime="2021-03-15T01:07:48+08:00">2021-03-15</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -314,7 +314,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="情境說明"><a href="#情境說明" class="headerlink" title="情境說明"></a>情境說明</h3><p>此次調整部分為下圖紅框，沒有進行調整時 Port 會是 WSL+1 區間，因為特殊目的調整 WSH Port<br><img data-src="/images/ptthreetier.jpg"></p>
+          <h3 id="情境說明"><a href="#情境說明" class="headerlink" title="情境說明"></a>情境說明</h3><p>此次調整部分為下圖紅框，沒有進行調整時 Port 會是 WSL+1 區間，因為特殊目的調整 WSH Port<br><img data-src="../images/ptthreetier.jpg"></p>
 <h3 id="目標"><a href="#目標" class="headerlink" title="目標"></a>目標</h3><table>
 <thead>
 <tr>
@@ -339,115 +339,6 @@
 <li>搜尋「{LO_WSL_PORT}」調整「9001」</li>
 <li>搜尋「{HI_WSL_PORT}」調整「9005」</li>
 <li>執行「PSADMIN」&gt; AP 設定(會關閉服務) &gt; 重新讀取設定檔 &gt; 開啟服務</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://jmyhsieh.github.io/2019/04/ptmigrationgbackup/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jimmy Hsieh">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jimmy 的學習筆記">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/04/ptmigrationgbackup/" class="post-title-link" itemprop="url">PeopleTools Migration 前備份</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2019-04-13 20:46:25" itemprop="dateCreated datePublished" datetime="2019-04-13T20:46:25+08:00">2019-04-13</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-15 00:36:31" itemprop="dateModified" datetime="2021-03-15T00:36:31+08:00">2021-03-15</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/PeopleSoft/" itemprop="url" rel="index"><span itemprop="name">PeopleSoft</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="文章字數">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">文章字數：</span>
-      <span>268</span>
-    </span>
-    <span class="post-meta-item" title="所需閱讀時間">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-      <span>1 分鐘</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="專案結構-Migration"><a href="#專案結構-Migration" class="headerlink" title="專案結構 Migration"></a>專案結構 Migration</h3><ul>
-<li>開啟 PeopleTools 執行 Tools &gt; Copy Project &gt; To Database…</li>
-<li>勾選「Copy Project Definition」</li>
-<li>點選「Deselect All」</li>
-<li>執行「Copy」</li>
-</ul>
-<h3 id="備份"><a href="#備份" class="headerlink" title="備份"></a>備份</h3><ul>
-<li>開啟 PeopleTools 連線至「需要備份環境」執行 Tools &gt; Copy Project &gt; To File…</li>
-<li>點選「Select All」</li>
-<li>執行「Copy」</li>
-</ul>
-<h3 id="還原"><a href="#還原" class="headerlink" title="還原"></a>還原</h3><ul>
-<li>開啟 PeopleTools 連線至「需要備份環境」執行 Tools &gt; Copy Project &gt; From File… &gt; 選擇備份檔案進行 Copy</li>
 </ul>
 
       
@@ -775,6 +666,115 @@
 <h2 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java –cp “.;bcprov-jdk15on-156.jar” WebLogicPasswordDecryptor 「SerializedSystemIni.dat絕對路徑」 「加密後字串」</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://blog.netspi.com/decrypting-weblogic-passwords/">decrypting-weblogic-passwords/</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jmyhsieh.github.io/2018/02/ptmigrationgbackup/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jimmy Hsieh">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jimmy 的學習筆記">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2018/02/ptmigrationgbackup/" class="post-title-link" itemprop="url">PeopleTools Migration 前備份</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2018-02-13 20:46:25" itemprop="dateCreated datePublished" datetime="2018-02-13T20:46:25+08:00">2018-02-13</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-03-15 01:09:19" itemprop="dateModified" datetime="2021-03-15T01:09:19+08:00">2021-03-15</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/PeopleSoft/" itemprop="url" rel="index"><span itemprop="name">PeopleSoft</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>268</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="專案結構-Migration"><a href="#專案結構-Migration" class="headerlink" title="專案結構 Migration"></a>專案結構 Migration</h3><ul>
+<li>開啟 PeopleTools 執行 Tools &gt; Copy Project &gt; To Database…</li>
+<li>勾選「Copy Project Definition」</li>
+<li>點選「Deselect All」</li>
+<li>執行「Copy」</li>
+</ul>
+<h3 id="備份"><a href="#備份" class="headerlink" title="備份"></a>備份</h3><ul>
+<li>開啟 PeopleTools 連線至「需要備份環境」執行 Tools &gt; Copy Project &gt; To File…</li>
+<li>點選「Select All」</li>
+<li>執行「Copy」</li>
+</ul>
+<h3 id="還原"><a href="#還原" class="headerlink" title="還原"></a>還原</h3><ul>
+<li>開啟 PeopleTools 連線至「需要備份環境」執行 Tools &gt; Copy Project &gt; From File… &gt; 選擇備份檔案進行 Copy</li>
+</ul>
 
       
     </div>

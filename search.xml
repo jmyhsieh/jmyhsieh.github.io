@@ -27,7 +27,7 @@
   <entry>
     <title>PeopleSoft 調整 Tuxedo WSH Port 給 PeopleTools 3 tier 使用</title>
     <url>/2021/02/pschangeportforwsh/</url>
-    <content><![CDATA[<h3 id="情境說明"><a href="#情境說明" class="headerlink" title="情境說明"></a>情境說明</h3><p>此次調整部分為下圖紅框，沒有進行調整時 Port 會是 WSL+1 區間，因為特殊目的調整 WSH Port<br><img data-src="/images/ptthreetier.jpg"></p>
+    <content><![CDATA[<h3 id="情境說明"><a href="#情境說明" class="headerlink" title="情境說明"></a>情境說明</h3><p>此次調整部分為下圖紅框，沒有進行調整時 Port 會是 WSL+1 區間，因為特殊目的調整 WSH Port<br><img data-src="../images/ptthreetier.jpg"></p>
 <h3 id="目標"><a href="#目標" class="headerlink" title="目標"></a>目標</h3><table>
 <thead>
 <tr>
@@ -63,7 +63,7 @@
   </entry>
   <entry>
     <title>PeopleTools Migration 前備份</title>
-    <url>/2019/04/ptmigrationgbackup/</url>
+    <url>/2018/02/ptmigrationgbackup/</url>
     <content><![CDATA[<h3 id="專案結構-Migration"><a href="#專案結構-Migration" class="headerlink" title="專案結構 Migration"></a>專案結構 Migration</h3><ul>
 <li>開啟 PeopleTools 執行 Tools &gt; Copy Project &gt; To Database…</li>
 <li>勾選「Copy Project Definition」</li>
