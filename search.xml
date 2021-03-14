@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>peoplesoft用Command啟動關閉服務</title>
+    <url>/2018/01/psadmincommand/</url>
+    <content><![CDATA[<h3 id="啟動-ap"><a href="#啟動-ap" class="headerlink" title="啟動 ap"></a>啟動 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c boot -d HRDEMO</span><br></pre></td></tr></table></figure>
+
+<h3 id="關閉-ap"><a href="#關閉-ap" class="headerlink" title="關閉 ap"></a>關閉 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c shutdown -d HRDEMO</span><br></pre></td></tr></table></figure>
+
+<h3 id="啟動-processes"><a href="#啟動-processes" class="headerlink" title="啟動 processes"></a>啟動 processes</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p start -d HRDEMOPSNT</span><br></pre></td></tr></table></figure>
+
+<h3 id="停止-processes"><a href="#停止-processes" class="headerlink" title="停止 processes"></a>停止 processes</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p stop -d HRDEMOPSNT</span><br></pre></td></tr></table></figure>
+
+<h3 id="強制關閉-ap"><a href="#強制關閉-ap" class="headerlink" title="強制關閉 ap"></a>強制關閉 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c shutdown! -d HRDEMO</span><br></pre></td></tr></table></figure>
+
+<h3 id="強制停止-process"><a href="#強制停止-process" class="headerlink" title="強制停止 process"></a>強制停止 process</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p <span class="built_in">kill</span>  -d HRDEMOPSNT </span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://docs.oracle.com/cd/E41633_01/pt853pbh1/eng/pt/tsvt/task_UsingthePSADMINCommand-LineInterface-c07e70.html">PSADMINCommand</a></p>
+]]></content>
+      <categories>
+        <category>PeopleSoft</category>
+      </categories>
+      <tags>
+        <tag>PeopleSoft</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PeopleSoft 調整 Tuxedo WSH Port 給 PeopleTools 3 tier 使用</title>
     <url>/2021/02/pschangeportforwsh/</url>
-    <content><![CDATA[<h3 id="情境說明"><a href="#情境說明" class="headerlink" title="情境說明"></a>情境說明</h3><p>此次調整部分為下圖紅框，沒有進行調整時 Port 會是 WSL+1 區間，因為特殊目的調整 WSH Port<br>@import “/image/ptthreetier”</p>
+    <content><![CDATA[<h3 id="情境說明"><a href="#情境說明" class="headerlink" title="情境說明"></a>情境說明</h3><p>此次調整部分為下圖紅框，沒有進行調整時 Port 會是 WSL+1 區間，因為特殊目的調整 WSH Port<br><img data-src="/images/ptthreetier.jpg"></p>
 <h3 id="目標"><a href="#目標" class="headerlink" title="目標"></a>目標</h3><table>
 <thead>
 <tr>
@@ -28,6 +52,31 @@
 <li>搜尋「{LO_WSL_PORT}」調整「9001」</li>
 <li>搜尋「{HI_WSL_PORT}」調整「9005」</li>
 <li>執行「PSADMIN」&gt; AP 設定(會關閉服務) &gt; 重新讀取設定檔 &gt; 開啟服務</li>
+</ul>
+]]></content>
+      <categories>
+        <category>PeopleSoft</category>
+      </categories>
+      <tags>
+        <tag>PeopleSoft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PeopleTools Migration 前備份</title>
+    <url>/2019/04/ptmigrationgbackup/</url>
+    <content><![CDATA[<h3 id="專案結構-Migration"><a href="#專案結構-Migration" class="headerlink" title="專案結構 Migration"></a>專案結構 Migration</h3><ul>
+<li>開啟 PeopleTools 執行 Tools &gt; Copy Project &gt; To Database…</li>
+<li>勾選「Copy Project Definition」</li>
+<li>點選「Deselect All」</li>
+<li>執行「Copy」</li>
+</ul>
+<h3 id="備份"><a href="#備份" class="headerlink" title="備份"></a>備份</h3><ul>
+<li>開啟 PeopleTools 連線至「需要備份環境」執行 Tools &gt; Copy Project &gt; To File…</li>
+<li>點選「Select All」</li>
+<li>執行「Copy」</li>
+</ul>
+<h3 id="還原"><a href="#還原" class="headerlink" title="還原"></a>還原</h3><ul>
+<li>開啟 PeopleTools 連線至「需要備份環境」執行 Tools &gt; Copy Project &gt; From File… &gt; 選擇備份檔案進行 Copy</li>
 </ul>
 ]]></content>
       <categories>
@@ -66,55 +115,6 @@
 <td>時間</td>
 </tr>
 </tbody></table>
-]]></content>
-      <categories>
-        <category>PeopleSoft</category>
-      </categories>
-      <tags>
-        <tag>PeopleSoft</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PeopleTools Migration 前備份</title>
-    <url>/2019/04/ptmigrationgbackup/</url>
-    <content><![CDATA[<h3 id="專案結構-Migration"><a href="#專案結構-Migration" class="headerlink" title="專案結構 Migration"></a>專案結構 Migration</h3><ul>
-<li>開啟 PeopleTools 執行 Tools &gt; Copy Project &gt; To Database…</li>
-<li>勾選「Copy Project Definition」</li>
-<li>點選「Deselect All」</li>
-<li>執行「Copy」</li>
-</ul>
-<h3 id="備份"><a href="#備份" class="headerlink" title="備份"></a>備份</h3><ul>
-<li>開啟 PeopleTools 連線至「需要備份環境」執行 Tools &gt; Copy Project &gt; To File…</li>
-<li>點選「Select All」</li>
-<li>執行「Copy」</li>
-</ul>
-<h3 id="還原"><a href="#還原" class="headerlink" title="還原"></a>還原</h3><ul>
-<li>開啟 PeopleTools 連線至「需要備份環境」執行 Tools &gt; Copy Project &gt; From File… &gt; 選擇備份檔案進行 Copy</li>
-</ul>
-]]></content>
-      <categories>
-        <category>PeopleSoft</category>
-      </categories>
-      <tags>
-        <tag>PeopleSoft</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>peoplesoft用Command啟動關閉服務</title>
-    <url>/2018/01/psadmincommand/</url>
-    <content><![CDATA[<h3 id="啟動-ap"><a href="#啟動-ap" class="headerlink" title="啟動 ap"></a>啟動 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c boot -d HRDEMO</span><br></pre></td></tr></table></figure>
-
-<h3 id="關閉-ap"><a href="#關閉-ap" class="headerlink" title="關閉 ap"></a>關閉 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c shutdown -d HRDEMO</span><br></pre></td></tr></table></figure>
-
-<h3 id="啟動-processes"><a href="#啟動-processes" class="headerlink" title="啟動 processes"></a>啟動 processes</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p start -d HRDEMOPSNT</span><br></pre></td></tr></table></figure>
-
-<h3 id="停止-processes"><a href="#停止-processes" class="headerlink" title="停止 processes"></a>停止 processes</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p stop -d HRDEMOPSNT</span><br></pre></td></tr></table></figure>
-
-<h3 id="強制關閉-ap"><a href="#強制關閉-ap" class="headerlink" title="強制關閉 ap"></a>強制關閉 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c shutdown! -d HRDEMO</span><br></pre></td></tr></table></figure>
-
-<h3 id="強制停止-process"><a href="#強制停止-process" class="headerlink" title="強制停止 process"></a>強制停止 process</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p <span class="built_in">kill</span>  -d HRDEMOPSNT </span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://docs.oracle.com/cd/E41633_01/pt853pbh1/eng/pt/tsvt/task_UsingthePSADMINCommand-LineInterface-c07e70.html">PSADMINCommand</a></p>
 ]]></content>
       <categories>
         <category>PeopleSoft</category>
