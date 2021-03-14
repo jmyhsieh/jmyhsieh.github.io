@@ -25,8 +25,83 @@
       </tags>
   </entry>
   <entry>
+    <title>PeopleTools Migration 前備份</title>
+    <url>/2019/04/ptmigrationgbackup/</url>
+    <content><![CDATA[<h3 id="專案結構-Migration"><a href="#專案結構-Migration" class="headerlink" title="專案結構 Migration"></a>專案結構 Migration</h3><ul>
+<li>開啟 PeopleTools 執行 Tools &gt; Copy Project &gt; To Database…</li>
+<li>勾選「Copy Project Definition」</li>
+<li>點選「Deselect All」</li>
+<li>執行「Copy」</li>
+</ul>
+<h3 id="備份"><a href="#備份" class="headerlink" title="備份"></a>備份</h3><ul>
+<li>開啟 PeopleTools 連線至「需要備份環境」執行 Tools &gt; Copy Project &gt; To File…</li>
+<li>點選「Select All」</li>
+<li>執行「Copy」</li>
+</ul>
+<h3 id="還原"><a href="#還原" class="headerlink" title="還原"></a>還原</h3><ul>
+<li>開啟 PeopleTools 連線至「需要備份環境」執行 Tools &gt; Copy Project &gt; From File… &gt; 選擇備份檔案進行 Copy</li>
+</ul>
+]]></content>
+      <categories>
+        <category>PeopleSoft</category>
+      </categories>
+      <tags>
+        <tag>PeopleSoft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PeopleTools Migration Log</title>
+    <url>/2019/02/ptmigrationlog/</url>
+    <content><![CDATA[<h3 id="TABLE"><a href="#TABLE" class="headerlink" title="TABLE"></a>TABLE</h3><p>PSPROJECTMSG</p>
+<h3 id="欄位資訊"><a href="#欄位資訊" class="headerlink" title="欄位資訊"></a>欄位資訊</h3><table>
+<thead>
+<tr>
+<th>MESSAGE_SET_NBR</th>
+<th align="center">MESSAGE_NBR</th>
+<th align="right">MESSAGE_PARM1</th>
+<th align="right">MESSAGE_PARM2</th>
+<th>MESSAGE_PARM3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>62</td>
+<td align="center">6</td>
+<td align="right">類型<br>EX: Record PeopleCode</td>
+<td align="right">動作<br>EX: Copy</td>
+<td>時間</td>
+</tr>
+<tr>
+<td>62</td>
+<td align="center">21</td>
+<td align="right">類型<br>EX: Record PeopleCode</td>
+<td align="right">動作<br>EX: Copy</td>
+<td>時間</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>PeopleSoft</category>
+      </categories>
+      <tags>
+        <tag>PeopleSoft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WebLogic Console Disable/Path</title>
+    <url>/2019/03/weblogicdisableconsole/</url>
+    <content><![CDATA[<h3 id="關閉主控台"><a href="#關閉主控台" class="headerlink" title="關閉主控台"></a>關閉主控台</h3><p>網域 → 組態 → 一般 → 進階 → 啟用主控台取消勾選</p>
+<h3 id="調整主控台路徑"><a href="#調整主控台路徑" class="headerlink" title="調整主控台路徑"></a>調整主控台路徑</h3><p>網域 → 組態 → 一般 → 進階 → 主控台相關資訊環境路徑<br>預設：console<br>  Ex: <a href="http://127.0.0.1/console">http://127.0.0.1/console</a></p>
+<h3 id="重新啟動-WebLogic"><a href="#重新啟動-WebLogic" class="headerlink" title="重新啟動 WebLogic"></a>重新啟動 WebLogic</h3>]]></content>
+      <categories>
+        <category>WebLogic</category>
+      </categories>
+      <tags>
+        <tag>WebLogic</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>WebLogicPasswordDecryptor(10.3.6)</title>
-    <url>/2020/03/webLogicpassworddecryptor/</url>
+    <url>/2020/03/weblogicpassworddecryptor/</url>
     <content><![CDATA[<h2 id="準備檔案及資料"><a href="#準備檔案及資料" class="headerlink" title="準備檔案及資料"></a>準備檔案及資料</h2><h3 id="已加密過的字串"><a href="#已加密過的字串" class="headerlink" title="已加密過的字串"></a>已加密過的字串</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">\psoft\HCM891\HRDEMO\webserv\peoplesoft\config\config.xml</span><br></pre></td></tr></table></figure>
 
 <pre><code>&lt;tag-name&gt;node-manager-password-encrypted內容
