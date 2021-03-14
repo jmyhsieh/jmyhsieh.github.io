@@ -25,19 +25,6 @@
       </tags>
   </entry>
   <entry>
-    <title>WebLogic Console Disable/Path</title>
-    <url>/2018/05/weblogicdisableconsole/</url>
-    <content><![CDATA[<h3 id="關閉主控台"><a href="#關閉主控台" class="headerlink" title="關閉主控台"></a>關閉主控台</h3><p>網域 → 組態 → 一般 → 進階 → 啟用主控台取消勾選</p>
-<h3 id="調整主控台路徑"><a href="#調整主控台路徑" class="headerlink" title="調整主控台路徑"></a>調整主控台路徑</h3><p>網域 → 組態 → 一般 → 進階 → 主控台相關資訊環境路徑<br>預設：console<br>  Ex: <a href="http://127.0.0.1/console">http://127.0.0.1/console</a></p>
-<h3 id="重新啟動-WebLogic"><a href="#重新啟動-WebLogic" class="headerlink" title="重新啟動 WebLogic"></a>重新啟動 WebLogic</h3>]]></content>
-      <categories>
-        <category>WebLogic</category>
-      </categories>
-      <tags>
-        <tag>WebLogic</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PeopleSoft 調整 Tuxedo WSH Port 給 PeopleTools 3 tier 使用</title>
     <url>/2021/02/pschangeportforwsh/</url>
     <content><![CDATA[<h3 id="情境說明"><a href="#情境說明" class="headerlink" title="情境說明"></a>情境說明</h3><p>此次調整部分為下圖紅框，沒有進行調整時 Port 會是 WSL+1 區間，因為特殊目的調整 WSH Port</p>
@@ -99,6 +86,19 @@
       </categories>
       <tags>
         <tag>PeopleSoft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WebLogic Console Disable/Path</title>
+    <url>/2018/05/weblogicdisableconsole/</url>
+    <content><![CDATA[<h3 id="關閉主控台"><a href="#關閉主控台" class="headerlink" title="關閉主控台"></a>關閉主控台</h3><p>網域 → 組態 → 一般 → 進階 → 啟用主控台取消勾選</p>
+<h3 id="調整主控台路徑"><a href="#調整主控台路徑" class="headerlink" title="調整主控台路徑"></a>調整主控台路徑</h3><p>網域 → 組態 → 一般 → 進階 → 主控台相關資訊環境路徑<br>預設：console<br>  Ex: <a href="http://127.0.0.1/console">http://127.0.0.1/console</a></p>
+<h3 id="重新啟動-WebLogic"><a href="#重新啟動-WebLogic" class="headerlink" title="重新啟動 WebLogic"></a>重新啟動 WebLogic</h3>]]></content>
+      <categories>
+        <category>WebLogic</category>
+      </categories>
+      <tags>
+        <tag>WebLogic</tag>
       </tags>
   </entry>
   <entry>
