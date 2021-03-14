@@ -21,7 +21,7 @@
         <category>PeopleSoft</category>
       </categories>
       <tags>
-        <tag>PSADMIN</tag>
+        <tag>PeopleSoft</tag>
       </tags>
   </entry>
   <entry>
@@ -45,8 +45,8 @@
         <category>WebLogic</category>
       </categories>
       <tags>
-        <tag>WebLogic</tag>
         <tag>PeopleSoft</tag>
+        <tag>WebLogic</tag>
       </tags>
   </entry>
 </search>
