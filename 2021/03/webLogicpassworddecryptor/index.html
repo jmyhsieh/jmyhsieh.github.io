@@ -23,20 +23,20 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"jmyhsieh.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}};
   </script>
-<meta name="description" content="啟動 ap1psadmin -c boot -d HRDEMO  關閉 ap1psadmin -c shutdown -d HRDEMO  啟動 processes1psadmin -p start -d HRDEMOPSNT  停止 processes1psadmin -p stop -d HRDEMOPSNT  強制關閉 ap1psadmin -c shutdown! -d HRDEMO  強">
+<meta name="description" content="準備檔案及資料已加密過的字串1\psoft\HCM891\HRDEMO\webserv\peoplesoft\config\config.xml  &lt;tag-name&gt;node-manager-password-encrypted內容  SerializedSystemIni.dat1\psoft\HCM891\HRDEMO\webserv\peoplesoft\security  b">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用Command啟動關閉peoplesoft服務">
-<meta property="og:url" content="https://jmyhsieh.github.io/psadmincommand/index.html">
+<meta property="og:title" content="WebLogicPasswordDecryptor(10.3.6)">
+<meta property="og:url" content="https://jmyhsieh.github.io/2021/03/webLogicpassworddecryptor/index.html">
 <meta property="og:site_name" content="Jimmy 的學習筆記">
-<meta property="og:description" content="啟動 ap1psadmin -c boot -d HRDEMO  關閉 ap1psadmin -c shutdown -d HRDEMO  啟動 processes1psadmin -p start -d HRDEMOPSNT  停止 processes1psadmin -p stop -d HRDEMOPSNT  強制關閉 ap1psadmin -c shutdown! -d HRDEMO  強">
+<meta property="og:description" content="準備檔案及資料已加密過的字串1\psoft\HCM891\HRDEMO\webserv\peoplesoft\config\config.xml  &lt;tag-name&gt;node-manager-password-encrypted內容  SerializedSystemIni.dat1\psoft\HCM891\HRDEMO\webserv\peoplesoft\security  b">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2021-03-13T15:59:22.300Z">
-<meta property="article:modified_time" content="2021-03-14T12:13:51.810Z">
+<meta property="article:published_time" content="2021-03-14T12:22:53.179Z">
+<meta property="article:modified_time" content="2021-03-14T12:30:39.711Z">
 <meta property="article:author" content="Jimmy Hsieh">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://jmyhsieh.github.io/psadmincommand/">
+<link rel="canonical" href="https://jmyhsieh.github.io/2021/03/webLogicpassworddecryptor/">
 
 
 <script data-pjax class="page-configurations">
@@ -48,7 +48,7 @@
     lang   : 'zh-TW'
   };
 </script>
-<title>用Command啟動關閉peoplesoft服務 | Jimmy 的學習筆記</title>
+<title>WebLogicPasswordDecryptor(10.3.6) | Jimmy 的學習筆記</title>
   
 
 
@@ -147,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%95%9F%E5%8B%95-ap"><span class="nav-number">1.</span> <span class="nav-text">啟動 ap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%9C%E9%96%89-ap"><span class="nav-number">2.</span> <span class="nav-text">關閉 ap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%95%9F%E5%8B%95-processes"><span class="nav-number">3.</span> <span class="nav-text">啟動 processes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%81%9C%E6%AD%A2-processes"><span class="nav-number">4.</span> <span class="nav-text">停止 processes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%B7%E5%88%B6%E9%97%9C%E9%96%89-ap"><span class="nav-number">5.</span> <span class="nav-text">強制關閉 ap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%B7%E5%88%B6%E5%81%9C%E6%AD%A2-process"><span class="nav-number">6.</span> <span class="nav-text">強制停止 process</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BA%96%E5%82%99%E6%AA%94%E6%A1%88%E5%8F%8A%E8%B3%87%E6%96%99"><span class="nav-number">1.</span> <span class="nav-text">準備檔案及資料</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%B2%E5%8A%A0%E5%AF%86%E9%81%8E%E7%9A%84%E5%AD%97%E4%B8%B2"><span class="nav-number">1.1.</span> <span class="nav-text">已加密過的字串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SerializedSystemIni-dat"><span class="nav-number">1.2.</span> <span class="nav-text">SerializedSystemIni.dat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bcprov-jdk15on-156-jar"><span class="nav-number">1.3.</span> <span class="nav-text">bcprov-jdk15on-156.jar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WebLogicPasswordDecryptor-%E7%9B%B8%E9%97%9C%E7%A8%8B%E5%BC%8F"><span class="nav-number">1.4.</span> <span class="nav-text">WebLogicPasswordDecryptor 相關程式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B7%A8%E8%AD%AF"><span class="nav-number">2.</span> <span class="nav-text">編譯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%AF%86"><span class="nav-number">3.</span> <span class="nav-text">解密</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -160,7 +160,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -200,7 +200,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://jmyhsieh.github.io/psadmincommand/">
+    <link itemprop="mainEntityOfPage" href="https://jmyhsieh.github.io/2021/03/webLogicpassworddecryptor/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -213,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          用Command啟動關閉peoplesoft服務
+          WebLogicPasswordDecryptor(10.3.6)
         </h1>
 
         <div class="post-meta-container">
@@ -223,16 +223,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2021-03-13 23:59:22" itemprop="dateCreated datePublished" datetime="2021-03-13T23:59:22+08:00">2021-03-13</time>
+      <time title="創建時間：2021-03-14 20:22:53 / 修改時間：20:30:39" itemprop="dateCreated datePublished" datetime="2021-03-14T20:22:53+08:00">2021-03-14</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-14 20:13:51" itemprop="dateModified" datetime="2021-03-14T20:13:51+08:00">2021-03-14</time>
-      </span>
 
   
 </div>
@@ -244,19 +238,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="啟動-ap"><a href="#啟動-ap" class="headerlink" title="啟動 ap"></a>啟動 ap</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psadmin -c boot -d HRDEMO</span><br></pre></td></tr></table></figure>
+        <h2 id="準備檔案及資料"><a href="#準備檔案及資料" class="headerlink" title="準備檔案及資料"></a>準備檔案及資料</h2><h3 id="已加密過的字串"><a href="#已加密過的字串" class="headerlink" title="已加密過的字串"></a>已加密過的字串</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\psoft\HCM891\HRDEMO\webserv\peoplesoft\config\config.xml</span><br></pre></td></tr></table></figure>
 
-<h3 id="關閉-ap"><a href="#關閉-ap" class="headerlink" title="關閉 ap"></a>關閉 ap</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psadmin -c shutdown -d HRDEMO</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;tag-name&gt;node-manager-password-encrypted內容
+</code></pre>
+<h3 id="SerializedSystemIni-dat"><a href="#SerializedSystemIni-dat" class="headerlink" title="SerializedSystemIni.dat"></a>SerializedSystemIni.dat</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\psoft\HCM891\HRDEMO\webserv\peoplesoft\security</span><br></pre></td></tr></table></figure>
 
-<h3 id="啟動-processes"><a href="#啟動-processes" class="headerlink" title="啟動 processes"></a>啟動 processes</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psadmin -p start -d HRDEMOPSNT</span><br></pre></td></tr></table></figure>
+<h3 id="bcprov-jdk15on-156-jar"><a href="#bcprov-jdk15on-156-jar" class="headerlink" title="bcprov-jdk15on-156.jar"></a>bcprov-jdk15on-156.jar</h3><p>info: <a target="_blank" rel="noopener" href="http://www.bouncycastle.org/">bcprov-jdk15on-156.jar</a></p>
+<h3 id="WebLogicPasswordDecryptor-相關程式"><a href="#WebLogicPasswordDecryptor-相關程式" class="headerlink" title="WebLogicPasswordDecryptor 相關程式"></a>WebLogicPasswordDecryptor 相關程式</h3><p>info: <a target="_blank" rel="noopener" href="https://github.com/NetSPI/WebLogicPasswordDecryptor">WebLogicPasswordDecryptor</a></p>
+<h2 id="編譯"><a href="#編譯" class="headerlink" title="編譯"></a>編譯</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac -cp <span class="string">&quot;.;bcprov-jdk15on-156.jar&quot;</span> WebLogicPasswordDecryptor.java</span><br></pre></td></tr></table></figure>
 
-<h3 id="停止-processes"><a href="#停止-processes" class="headerlink" title="停止 processes"></a>停止 processes</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psadmin -p stop -d HRDEMOPSNT</span><br></pre></td></tr></table></figure>
+<h2 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java –cp “.;bcprov-jdk15on-156.jar” WebLogicPasswordDecryptor 「SerializedSystemIni.dat絕對路徑」 「加密後字串」</span><br></pre></td></tr></table></figure>
 
-<h3 id="強制關閉-ap"><a href="#強制關閉-ap" class="headerlink" title="強制關閉 ap"></a>強制關閉 ap</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psadmin -c shutdown! -d HRDEMO</span><br></pre></td></tr></table></figure>
-
-<h3 id="強制停止-process"><a href="#強制停止-process" class="headerlink" title="強制停止 process"></a>強制停止 process</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psadmin -p <span class="built_in">kill</span>  -d HRDEMOPSNT </span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://docs.oracle.com/cd/E41633_01/pt853pbh1/eng/pt/tsvt/task_UsingthePSADMINCommand-LineInterface-c07e70.html">PSADMINCommand</a></p>
+<p>More info: <a target="_blank" rel="noopener" href="https://blog.netspi.com/decrypting-weblogic-passwords/">decrypting-weblogic-passwords/</a></p>
 
     </div>
 
@@ -268,6 +262,15 @@
 
         
 
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/psadmincommand/" rel="prev" title="peoplesoft用Command啟動關閉服務">
+                  <i class="fa fa-chevron-left"></i> peoplesoft用Command啟動關閉服務
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>

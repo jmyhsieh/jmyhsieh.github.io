@@ -155,7 +155,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -194,7 +194,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://jmyhsieh.github.io/psadmincommand/">
+    <link itemprop="mainEntityOfPage" href="https://jmyhsieh.github.io/2021/03/webLogicpassworddecryptor/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -207,7 +207,84 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/psadmincommand/" class="post-title-link" itemprop="url">用Command啟動關閉peoplesoft服務</a>
+          <a href="/2021/03/webLogicpassworddecryptor/" class="post-title-link" itemprop="url">WebLogicPasswordDecryptor(10.3.6)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2021-03-14 20:22:53 / 修改時間：20:30:39" itemprop="dateCreated datePublished" datetime="2021-03-14T20:22:53+08:00">2021-03-14</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="準備檔案及資料"><a href="#準備檔案及資料" class="headerlink" title="準備檔案及資料"></a>準備檔案及資料</h2><h3 id="已加密過的字串"><a href="#已加密過的字串" class="headerlink" title="已加密過的字串"></a>已加密過的字串</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\psoft\HCM891\HRDEMO\webserv\peoplesoft\config\config.xml</span><br></pre></td></tr></table></figure>
+
+<pre><code>&lt;tag-name&gt;node-manager-password-encrypted內容
+</code></pre>
+<h3 id="SerializedSystemIni-dat"><a href="#SerializedSystemIni-dat" class="headerlink" title="SerializedSystemIni.dat"></a>SerializedSystemIni.dat</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\psoft\HCM891\HRDEMO\webserv\peoplesoft\security</span><br></pre></td></tr></table></figure>
+
+<h3 id="bcprov-jdk15on-156-jar"><a href="#bcprov-jdk15on-156-jar" class="headerlink" title="bcprov-jdk15on-156.jar"></a>bcprov-jdk15on-156.jar</h3><p>info: <a target="_blank" rel="noopener" href="http://www.bouncycastle.org/">bcprov-jdk15on-156.jar</a></p>
+<h3 id="WebLogicPasswordDecryptor-相關程式"><a href="#WebLogicPasswordDecryptor-相關程式" class="headerlink" title="WebLogicPasswordDecryptor 相關程式"></a>WebLogicPasswordDecryptor 相關程式</h3><p>info: <a target="_blank" rel="noopener" href="https://github.com/NetSPI/WebLogicPasswordDecryptor">WebLogicPasswordDecryptor</a></p>
+<h2 id="編譯"><a href="#編譯" class="headerlink" title="編譯"></a>編譯</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac -cp <span class="string">&quot;.;bcprov-jdk15on-156.jar&quot;</span> WebLogicPasswordDecryptor.java</span><br></pre></td></tr></table></figure>
+
+<h2 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java –cp “.;bcprov-jdk15on-156.jar” WebLogicPasswordDecryptor 「SerializedSystemIni.dat絕對路徑」 「加密後字串」</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://blog.netspi.com/decrypting-weblogic-passwords/">decrypting-weblogic-passwords/</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jmyhsieh.github.io/2021/03/psadmincommand/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jimmy Hsieh">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jimmy 的學習筆記">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/psadmincommand/" class="post-title-link" itemprop="url">peoplesoft用Command啟動關閉服務</a>
         </h2>
 
         <div class="post-meta-container">
@@ -225,7 +302,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-14 20:13:51" itemprop="dateModified" datetime="2021-03-14T20:13:51+08:00">2021-03-14</time>
+        <time title="修改時間：2021-03-14 20:19:00" itemprop="dateModified" datetime="2021-03-14T20:19:00+08:00">2021-03-14</time>
       </span>
 
   
