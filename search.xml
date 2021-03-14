@@ -139,7 +139,7 @@
       </tags>
   </entry>
   <entry>
-    <title>WebLogicPasswordDecryptor(10.3.6)</title>
+    <title>WebLogic Password Decryptor(10.3.6)</title>
     <url>/2018/03/weblogicpassworddecryptor/</url>
     <content><![CDATA[<h2 id="準備檔案及資料"><a href="#準備檔案及資料" class="headerlink" title="準備檔案及資料"></a>準備檔案及資料</h2><h3 id="已加密過的字串"><a href="#已加密過的字串" class="headerlink" title="已加密過的字串"></a>已加密過的字串</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">\psoft\HCM891\HRDEMO\webserv\peoplesoft\config\config.xml</span><br></pre></td></tr></table></figure>
 
