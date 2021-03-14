@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jmyhsieh.github.io/2021/03/webLogicpassworddecryptor/</loc>
+    
+    <lastmod>2021-03-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jmyhsieh.github.io/2021/03/psadmincommand/</loc>
+    
+    <lastmod>2021-03-14</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jmyhsieh.github.io/about/index.html</loc>
     
     <lastmod>2021-03-14</lastmod>
@@ -22,20 +36,6 @@
     
   </url>
   
-  <url>
-    <loc>https://jmyhsieh.github.io/2021/03/webLogicpassworddecryptor/</loc>
-    
-    <lastmod>2021-03-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jmyhsieh.github.io/2021/03/psadmincommand/</loc>
-    
-    <lastmod>2021-03-14</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>https://jmyhsieh.github.io/</loc>
@@ -45,6 +45,34 @@
   </url>
 
   
+  <url>
+    <loc>https://jmyhsieh.github.io/tags/WebLogic/</loc>
+    <lastmod>2021-03-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyhsieh.github.io/tags/PeopleSoft/</loc>
+    <lastmod>2021-03-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://jmyhsieh.github.io/categories/WebLogic/</loc>
+    <lastmod>2021-03-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmyhsieh.github.io/categories/PeopleSoft/</loc>
+    <lastmod>2021-03-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 </urlset>

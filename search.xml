@@ -17,6 +17,13 @@
 
 <p>More info: <a href="https://blog.netspi.com/decrypting-weblogic-passwords/">decrypting-weblogic-passwords/</a></p>
 ]]></content>
+      <categories>
+        <category>WebLogic</category>
+      </categories>
+      <tags>
+        <tag>WebLogic</tag>
+        <tag>PeopleSoft</tag>
+      </tags>
   </entry>
   <entry>
     <title>peoplesoft用Command啟動關閉服務</title>
@@ -35,5 +42,11 @@
 
 <p>More info: <a href="https://docs.oracle.com/cd/E41633_01/pt853pbh1/eng/pt/tsvt/task_UsingthePSADMINCommand-LineInterface-c07e70.html">PSADMINCommand</a></p>
 ]]></content>
+      <categories>
+        <category>PeopleSoft</category>
+      </categories>
+      <tags>
+        <tag>PeopleSoft</tag>
+      </tags>
   </entry>
 </search>
