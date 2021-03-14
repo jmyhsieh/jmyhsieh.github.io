@@ -1,21 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>peoplesoft用Command啟動關閉服務</title>
-    <url>/2020/03/psadmincommand/</url>
-    <content><![CDATA[<h3 id="啟動-ap"><a href="#啟動-ap" class="headerlink" title="啟動 ap"></a>啟動 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c boot -d HRDEMO</span><br></pre></td></tr></table></figure>
-
-<h3 id="關閉-ap"><a href="#關閉-ap" class="headerlink" title="關閉 ap"></a>關閉 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c shutdown -d HRDEMO</span><br></pre></td></tr></table></figure>
-
-<h3 id="啟動-processes"><a href="#啟動-processes" class="headerlink" title="啟動 processes"></a>啟動 processes</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p start -d HRDEMOPSNT</span><br></pre></td></tr></table></figure>
-
-<h3 id="停止-processes"><a href="#停止-processes" class="headerlink" title="停止 processes"></a>停止 processes</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p stop -d HRDEMOPSNT</span><br></pre></td></tr></table></figure>
-
-<h3 id="強制關閉-ap"><a href="#強制關閉-ap" class="headerlink" title="強制關閉 ap"></a>強制關閉 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c shutdown! -d HRDEMO</span><br></pre></td></tr></table></figure>
-
-<h3 id="強制停止-process"><a href="#強制停止-process" class="headerlink" title="強制停止 process"></a>強制停止 process</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p <span class="built_in">kill</span>  -d HRDEMOPSNT </span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://docs.oracle.com/cd/E41633_01/pt853pbh1/eng/pt/tsvt/task_UsingthePSADMINCommand-LineInterface-c07e70.html">PSADMINCommand</a></p>
+    <title>PeopleSoft 調整 Tuxedo WSH Port 給 PeopleTools 3 tier 使用</title>
+    <url>/2021/02/pschangeportforwsh/</url>
+    <content><![CDATA[<h3 id="情境說明"><a href="#情境說明" class="headerlink" title="情境說明"></a>情境說明</h3><p>此次調整部分為下圖紅框，沒有進行調整時 Port 會是 WSL+1 區間，因為特殊目的調整 WSH Port<br>@import “/image/ptthreetier”</p>
+<h3 id="目標"><a href="#目標" class="headerlink" title="目標"></a>目標</h3><table>
+<thead>
+<tr>
+<th>#</th>
+<th align="right">調整前</th>
+<th align="right">調整後</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>WSL</td>
+<td align="right">7000</td>
+<td align="right">7000</td>
+</tr>
+<tr>
+<td>WSH</td>
+<td align="right">7001~7005</td>
+<td align="right">9001~9005</td>
+</tr>
+</tbody></table>
+<h3 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h3><ul>
+<li>開啟 PeopleSoft Tuxedo Template File(psappsrv.ubx)</li>
+<li>搜尋「{LO_WSL_PORT}」調整「9001」</li>
+<li>搜尋「{HI_WSL_PORT}」調整「9005」</li>
+<li>執行「PSADMIN」&gt; AP 設定(會關閉服務) &gt; 重新讀取設定檔 &gt; 開啟服務</li>
+</ul>
+]]></content>
+      <categories>
+        <category>PeopleSoft</category>
+      </categories>
+      <tags>
+        <tag>PeopleSoft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PeopleTools Migration Log</title>
+    <url>/2018/04/ptmigrationlog/</url>
+    <content><![CDATA[<h3 id="TABLE"><a href="#TABLE" class="headerlink" title="TABLE"></a>TABLE</h3><p>PSPROJECTMSG</p>
+<h3 id="欄位資訊"><a href="#欄位資訊" class="headerlink" title="欄位資訊"></a>欄位資訊</h3><table>
+<thead>
+<tr>
+<th align="right">MESSAGE_SET_NBR</th>
+<th align="right">MESSAGE_NBR</th>
+<th align="right">MESSAGE_PARM1</th>
+<th align="right">MESSAGE_PARM2</th>
+<th>MESSAGE_PARM3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">62</td>
+<td align="right">6</td>
+<td align="right">類型<br>EX: Record PeopleCode</td>
+<td align="right">動作<br>EX: Copy</td>
+<td>時間</td>
+</tr>
+<tr>
+<td align="right">62</td>
+<td align="right">21</td>
+<td align="right">類型<br>EX: Record PeopleCode</td>
+<td align="right">動作<br>EX: Copy</td>
+<td>時間</td>
+</tr>
+</tbody></table>
 ]]></content>
       <categories>
         <category>PeopleSoft</category>
@@ -50,34 +100,21 @@
       </tags>
   </entry>
   <entry>
-    <title>PeopleTools Migration Log</title>
-    <url>/2019/02/ptmigrationlog/</url>
-    <content><![CDATA[<h3 id="TABLE"><a href="#TABLE" class="headerlink" title="TABLE"></a>TABLE</h3><p>PSPROJECTMSG</p>
-<h3 id="欄位資訊"><a href="#欄位資訊" class="headerlink" title="欄位資訊"></a>欄位資訊</h3><table>
-<thead>
-<tr>
-<th>MESSAGE_SET_NBR</th>
-<th align="center">MESSAGE_NBR</th>
-<th align="right">MESSAGE_PARM1</th>
-<th align="right">MESSAGE_PARM2</th>
-<th>MESSAGE_PARM3</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>62</td>
-<td align="center">6</td>
-<td align="right">類型<br>EX: Record PeopleCode</td>
-<td align="right">動作<br>EX: Copy</td>
-<td>時間</td>
-</tr>
-<tr>
-<td>62</td>
-<td align="center">21</td>
-<td align="right">類型<br>EX: Record PeopleCode</td>
-<td align="right">動作<br>EX: Copy</td>
-<td>時間</td>
-</tr>
-</tbody></table>
+    <title>peoplesoft用Command啟動關閉服務</title>
+    <url>/2018/01/psadmincommand/</url>
+    <content><![CDATA[<h3 id="啟動-ap"><a href="#啟動-ap" class="headerlink" title="啟動 ap"></a>啟動 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c boot -d HRDEMO</span><br></pre></td></tr></table></figure>
+
+<h3 id="關閉-ap"><a href="#關閉-ap" class="headerlink" title="關閉 ap"></a>關閉 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c shutdown -d HRDEMO</span><br></pre></td></tr></table></figure>
+
+<h3 id="啟動-processes"><a href="#啟動-processes" class="headerlink" title="啟動 processes"></a>啟動 processes</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p start -d HRDEMOPSNT</span><br></pre></td></tr></table></figure>
+
+<h3 id="停止-processes"><a href="#停止-processes" class="headerlink" title="停止 processes"></a>停止 processes</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p stop -d HRDEMOPSNT</span><br></pre></td></tr></table></figure>
+
+<h3 id="強制關閉-ap"><a href="#強制關閉-ap" class="headerlink" title="強制關閉 ap"></a>強制關閉 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c shutdown! -d HRDEMO</span><br></pre></td></tr></table></figure>
+
+<h3 id="強制停止-process"><a href="#強制停止-process" class="headerlink" title="強制停止 process"></a>強制停止 process</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p <span class="built_in">kill</span>  -d HRDEMOPSNT </span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://docs.oracle.com/cd/E41633_01/pt853pbh1/eng/pt/tsvt/task_UsingthePSADMINCommand-LineInterface-c07e70.html">PSADMINCommand</a></p>
 ]]></content>
       <categories>
         <category>PeopleSoft</category>
@@ -88,7 +125,7 @@
   </entry>
   <entry>
     <title>WebLogic Console Disable/Path</title>
-    <url>/2019/03/weblogicdisableconsole/</url>
+    <url>/2018/05/weblogicdisableconsole/</url>
     <content><![CDATA[<h3 id="關閉主控台"><a href="#關閉主控台" class="headerlink" title="關閉主控台"></a>關閉主控台</h3><p>網域 → 組態 → 一般 → 進階 → 啟用主控台取消勾選</p>
 <h3 id="調整主控台路徑"><a href="#調整主控台路徑" class="headerlink" title="調整主控台路徑"></a>調整主控台路徑</h3><p>網域 → 組態 → 一般 → 進階 → 主控台相關資訊環境路徑<br>預設：console<br>  Ex: <a href="http://127.0.0.1/console">http://127.0.0.1/console</a></p>
 <h3 id="重新啟動-WebLogic"><a href="#重新啟動-WebLogic" class="headerlink" title="重新啟動 WebLogic"></a>重新啟動 WebLogic</h3>]]></content>
@@ -101,7 +138,7 @@
   </entry>
   <entry>
     <title>WebLogicPasswordDecryptor(10.3.6)</title>
-    <url>/2020/03/weblogicpassworddecryptor/</url>
+    <url>/2018/03/weblogicpassworddecryptor/</url>
     <content><![CDATA[<h2 id="準備檔案及資料"><a href="#準備檔案及資料" class="headerlink" title="準備檔案及資料"></a>準備檔案及資料</h2><h3 id="已加密過的字串"><a href="#已加密過的字串" class="headerlink" title="已加密過的字串"></a>已加密過的字串</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">\psoft\HCM891\HRDEMO\webserv\peoplesoft\config\config.xml</span><br></pre></td></tr></table></figure>
 
 <pre><code>&lt;tag-name&gt;node-manager-password-encrypted內容
