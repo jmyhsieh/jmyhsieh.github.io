@@ -23,15 +23,15 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"jmyhsieh.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="PeopleCode使用Exec使用指令 1234&amp;ExitCode &#x3D; Exec(&amp;commandline, %FilePath_Absolute);If &amp;ExitCode &lt;&gt; 0 Then   MessageBox(0, “”””, 0, 0, (“”Script was not Successful! Exit code returned by scr">
+<meta name="description" content="PeopleCodeExec使用指令 1234&amp;ExitCode &#x3D; Exec(&amp;commandline, %FilePath_Absolute);If &amp;ExitCode &lt;&gt; 0 Then   MessageBox(0, “”””, 0, 0, (“”Script was not Successful! Exit code returned by scrip">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PeopleSoft 使用 GnuPG">
 <meta property="og:url" content="https://jmyhsieh.github.io/2021/01/psusepgp/index.html">
 <meta property="og:site_name" content="Jimmy 的學習筆記">
-<meta property="og:description" content="PeopleCode使用Exec使用指令 1234&amp;ExitCode &#x3D; Exec(&amp;commandline, %FilePath_Absolute);If &amp;ExitCode &lt;&gt; 0 Then   MessageBox(0, “”””, 0, 0, (“”Script was not Successful! Exit code returned by scr">
+<meta property="og:description" content="PeopleCodeExec使用指令 1234&amp;ExitCode &#x3D; Exec(&amp;commandline, %FilePath_Absolute);If &amp;ExitCode &lt;&gt; 0 Then   MessageBox(0, “”””, 0, 0, (“”Script was not Successful! Exit code returned by scrip">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-01-13T12:46:25.000Z">
-<meta property="article:modified_time" content="2021-03-18T13:56:42.611Z">
+<meta property="article:modified_time" content="2021-03-18T13:58:03.785Z">
 <meta property="article:author" content="Jimmy Hsieh">
 <meta property="article:tag" content="PeopleSoft">
 <meta property="article:tag" content="PGP">
@@ -262,7 +262,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-03-18 21:56:42" itemprop="dateModified" datetime="2021-03-18T21:56:42+08:00">2021-03-18</time>
+        <time title="修改時間：2021-03-18 21:58:03" itemprop="dateModified" datetime="2021-03-18T21:58:03+08:00">2021-03-18</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -282,7 +282,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>369</span>
+      <span>367</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
@@ -300,7 +300,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="PeopleCode"><a href="#PeopleCode" class="headerlink" title="PeopleCode"></a>PeopleCode</h3><p>使用Exec使用指令</p>
+        <h3 id="PeopleCode"><a href="#PeopleCode" class="headerlink" title="PeopleCode"></a>PeopleCode</h3><p>Exec使用指令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&amp;ExitCode = Exec(&amp;commandline, %FilePath_Absolute);</span><br><span class="line">If &amp;ExitCode &lt;&gt; 0 Then</span><br><span class="line">   MessageBox(0, “”””, 0, 0, (“”Script was not Successful! Exit code returned by script was “” | &amp;ExitCode));</span><br><span class="line">End-If;</span><br></pre></td></tr></table></figure>
 
 <h3 id="安裝GnuPG"><a href="#安裝GnuPG" class="headerlink" title="安裝GnuPG"></a>安裝GnuPG</h3><p><a target="_blank" rel="noopener" href="https://gnupg.org/download/">Download</a> </p>

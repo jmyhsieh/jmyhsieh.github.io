@@ -1,45 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>PeopleSoft 調整 Tuxedo WSH Port 給 PeopleTools 3 tier 使用</title>
-    <url>/2021/02/pschangeportforwsh/</url>
-    <content><![CDATA[<h3 id="情境說明"><a href="#情境說明" class="headerlink" title="情境說明"></a>情境說明</h3><p>此次調整部分為下圖紅框，沒有進行調整時 Port 會是 WSL+1 區間，因為特殊目的調整 WSH Port</p>
-<img data-src="/2021/02/pschangeportforwsh/ptthreetier.jpg" class="">
-
-<h3 id="目標"><a href="#目標" class="headerlink" title="目標"></a>目標</h3><table>
-<thead>
-<tr>
-<th>#</th>
-<th align="right">調整前</th>
-<th align="right">調整後</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>WSL</td>
-<td align="right">7000</td>
-<td align="right">7000</td>
-</tr>
-<tr>
-<td>WSH</td>
-<td align="right">7001~7005</td>
-<td align="right">9001~9005</td>
-</tr>
-</tbody></table>
-<h3 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h3><ul>
-<li>開啟 PeopleSoft Tuxedo Template File(psappsrv.ubx)</li>
-<li>搜尋「{LO_WSL_PORT}」調整「9001」</li>
-<li>搜尋「{HI_WSL_PORT}」調整「9005」</li>
-<li>執行「PSADMIN」&gt; AP 設定(會關閉服務) &gt; 重新讀取設定檔 &gt; 開啟服務</li>
-</ul>
-]]></content>
-      <categories>
-        <category>PeopleSoft</category>
-      </categories>
-      <tags>
-        <tag>PeopleSoft</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>peoplesoft用Command啟動關閉服務</title>
     <url>/2018/01/psadmincommand/</url>
     <content><![CDATA[<h3 id="啟動-ap"><a href="#啟動-ap" class="headerlink" title="啟動 ap"></a>啟動 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c boot -d HRDEMO</span><br></pre></td></tr></table></figure>
@@ -61,6 +22,29 @@
       </categories>
       <tags>
         <tag>PeopleSoft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PeopleSoft 使用 GnuPG</title>
+    <url>/2021/01/psusepgp/</url>
+    <content><![CDATA[<h3 id="PeopleCode"><a href="#PeopleCode" class="headerlink" title="PeopleCode"></a>PeopleCode</h3><p>Exec使用指令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&amp;ExitCode = Exec(&amp;commandline, %FilePath_Absolute);</span><br><span class="line">If &amp;ExitCode &lt;&gt; 0 Then</span><br><span class="line">   MessageBox(0, “”””, 0, 0, (“”Script was not Successful! Exit code returned by script was “” | &amp;ExitCode));</span><br><span class="line">End-If;</span><br></pre></td></tr></table></figure>
+
+<h3 id="安裝GnuPG"><a href="#安裝GnuPG" class="headerlink" title="安裝GnuPG"></a>安裝GnuPG</h3><p><a href="https://gnupg.org/download/">Download</a> </p>
+<h3 id="建立PGP-Key"><a href="#建立PGP-Key" class="headerlink" title="建立PGP Key"></a>建立PGP Key</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpg --full-generate-key」</span><br></pre></td></tr></table></figure>
+
+<h3 id="匯出Public-key"><a href="#匯出Public-key" class="headerlink" title="匯出Public key"></a>匯出Public key</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpg --<span class="built_in">export</span> -a <span class="string">&quot;UserID&quot;</span> &gt; <span class="string">&quot;OutputFile&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="匯入Public-key"><a href="#匯入Public-key" class="headerlink" title="匯入Public key"></a>匯入Public key</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpg --import <span class="string">&quot;InputFile&quot;</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>PeopleSoft</category>
+      </categories>
+      <tags>
+        <tag>PeopleSoft</tag>
+        <tag>PGP</tag>
+        <tag>GnuPG</tag>
       </tags>
   </entry>
   <entry>
@@ -139,29 +123,6 @@
       </tags>
   </entry>
   <entry>
-    <title>PeopleSoft 使用 GnuPG</title>
-    <url>/2021/01/psusepgp/</url>
-    <content><![CDATA[<h3 id="PeopleCode"><a href="#PeopleCode" class="headerlink" title="PeopleCode"></a>PeopleCode</h3><p>使用Exec使用指令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&amp;ExitCode = Exec(&amp;commandline, %FilePath_Absolute);</span><br><span class="line">If &amp;ExitCode &lt;&gt; 0 Then</span><br><span class="line">   MessageBox(0, “”””, 0, 0, (“”Script was not Successful! Exit code returned by script was “” | &amp;ExitCode));</span><br><span class="line">End-If;</span><br></pre></td></tr></table></figure>
-
-<h3 id="安裝GnuPG"><a href="#安裝GnuPG" class="headerlink" title="安裝GnuPG"></a>安裝GnuPG</h3><p><a href="https://gnupg.org/download/">Download</a> </p>
-<h3 id="建立PGP-Key"><a href="#建立PGP-Key" class="headerlink" title="建立PGP Key"></a>建立PGP Key</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpg --full-generate-key」</span><br></pre></td></tr></table></figure>
-
-<h3 id="匯出Public-key"><a href="#匯出Public-key" class="headerlink" title="匯出Public key"></a>匯出Public key</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpg --<span class="built_in">export</span> -a <span class="string">&quot;UserID&quot;</span> &gt; <span class="string">&quot;OutputFile&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="匯入Public-key"><a href="#匯入Public-key" class="headerlink" title="匯入Public key"></a>匯入Public key</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpg --import <span class="string">&quot;InputFile&quot;</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>PeopleSoft</category>
-      </categories>
-      <tags>
-        <tag>PeopleSoft</tag>
-        <tag>PGP</tag>
-        <tag>GnuPG</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>WebLogic Password Decryptor(10.3.6)</title>
     <url>/2018/03/weblogicpassworddecryptor/</url>
     <content><![CDATA[<h2 id="準備檔案及資料"><a href="#準備檔案及資料" class="headerlink" title="準備檔案及資料"></a>準備檔案及資料</h2><h3 id="已加密過的字串"><a href="#已加密過的字串" class="headerlink" title="已加密過的字串"></a>已加密過的字串</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">\psoft\HCM891\HRDEMO\webserv\peoplesoft\config\config.xml</span><br></pre></td></tr></table></figure>
@@ -184,6 +145,45 @@
       <tags>
         <tag>PeopleSoft</tag>
         <tag>WebLogic</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PeopleSoft 調整 Tuxedo WSH Port 給 PeopleTools 3 tier 使用</title>
+    <url>/2021/02/pschangeportforwsh/</url>
+    <content><![CDATA[<h3 id="情境說明"><a href="#情境說明" class="headerlink" title="情境說明"></a>情境說明</h3><p>此次調整部分為下圖紅框，沒有進行調整時 Port 會是 WSL+1 區間，因為特殊目的調整 WSH Port</p>
+<img data-src="/2021/02/pschangeportforwsh/ptthreetier.jpg" class="">
+
+<h3 id="目標"><a href="#目標" class="headerlink" title="目標"></a>目標</h3><table>
+<thead>
+<tr>
+<th>#</th>
+<th align="right">調整前</th>
+<th align="right">調整後</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>WSL</td>
+<td align="right">7000</td>
+<td align="right">7000</td>
+</tr>
+<tr>
+<td>WSH</td>
+<td align="right">7001~7005</td>
+<td align="right">9001~9005</td>
+</tr>
+</tbody></table>
+<h3 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h3><ul>
+<li>開啟 PeopleSoft Tuxedo Template File(psappsrv.ubx)</li>
+<li>搜尋「{LO_WSL_PORT}」調整「9001」</li>
+<li>搜尋「{HI_WSL_PORT}」調整「9005」</li>
+<li>執行「PSADMIN」&gt; AP 設定(會關閉服務) &gt; 重新讀取設定檔 &gt; 開啟服務</li>
+</ul>
+]]></content>
+      <categories>
+        <category>PeopleSoft</category>
+      </categories>
+      <tags>
+        <tag>PeopleSoft</tag>
       </tags>
   </entry>
 </search>
