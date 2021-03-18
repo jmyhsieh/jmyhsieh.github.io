@@ -345,6 +345,111 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jmyhsieh.github.io/2021/01/psusepgp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jimmy Hsieh">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jimmy 的學習筆記">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/01/psusepgp/" class="post-title-link" itemprop="url">PeopleSoft 使用 GnuPG</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-01-13 20:46:25" itemprop="dateCreated datePublished" datetime="2021-01-13T20:46:25+08:00">2021-01-13</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-03-18 21:56:42" itemprop="dateModified" datetime="2021-03-18T21:56:42+08:00">2021-03-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/PeopleSoft/" itemprop="url" rel="index"><span itemprop="name">PeopleSoft</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>369</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="PeopleCode"><a href="#PeopleCode" class="headerlink" title="PeopleCode"></a>PeopleCode</h3><p>使用Exec使用指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&amp;ExitCode = Exec(&amp;commandline, %FilePath_Absolute);</span><br><span class="line">If &amp;ExitCode &lt;&gt; 0 Then</span><br><span class="line">   MessageBox(0, “”””, 0, 0, (“”Script was not Successful! Exit code returned by script was “” | &amp;ExitCode));</span><br><span class="line">End-If;</span><br></pre></td></tr></table></figure>
+
+<h3 id="安裝GnuPG"><a href="#安裝GnuPG" class="headerlink" title="安裝GnuPG"></a>安裝GnuPG</h3><p><a target="_blank" rel="noopener" href="https://gnupg.org/download/">Download</a> </p>
+<h3 id="建立PGP-Key"><a href="#建立PGP-Key" class="headerlink" title="建立PGP Key"></a>建立PGP Key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --full-generate-key」</span><br></pre></td></tr></table></figure>
+
+<h3 id="匯出Public-key"><a href="#匯出Public-key" class="headerlink" title="匯出Public key"></a>匯出Public key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --<span class="built_in">export</span> -a <span class="string">&quot;UserID&quot;</span> &gt; <span class="string">&quot;OutputFile&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="匯入Public-key"><a href="#匯入Public-key" class="headerlink" title="匯入Public key"></a>匯入Public key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --import <span class="string">&quot;InputFile&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://jmyhsieh.github.io/2018/05/weblogicdisableconsole/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">

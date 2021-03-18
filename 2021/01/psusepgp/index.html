@@ -23,16 +23,23 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"jmyhsieh.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jimmy 的學習筆記">
-<meta property="og:url" content="https://jmyhsieh.github.io/archives/2021/02/index.html">
+<meta name="description" content="PeopleCode使用Exec使用指令 1234&amp;ExitCode &#x3D; Exec(&amp;commandline, %FilePath_Absolute);If &amp;ExitCode &lt;&gt; 0 Then   MessageBox(0, “”””, 0, 0, (“”Script was not Successful! Exit code returned by scr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PeopleSoft 使用 GnuPG">
+<meta property="og:url" content="https://jmyhsieh.github.io/2021/01/psusepgp/index.html">
 <meta property="og:site_name" content="Jimmy 的學習筆記">
+<meta property="og:description" content="PeopleCode使用Exec使用指令 1234&amp;ExitCode &#x3D; Exec(&amp;commandline, %FilePath_Absolute);If &amp;ExitCode &lt;&gt; 0 Then   MessageBox(0, “”””, 0, 0, (“”Script was not Successful! Exit code returned by scr">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2021-01-13T12:46:25.000Z">
+<meta property="article:modified_time" content="2021-03-18T13:56:42.611Z">
 <meta property="article:author" content="Jimmy Hsieh">
+<meta property="article:tag" content="PeopleSoft">
+<meta property="article:tag" content="PGP">
+<meta property="article:tag" content="GnuPG">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://jmyhsieh.github.io/archives/2021/02/">
+<link rel="canonical" href="https://jmyhsieh.github.io/2021/01/psusepgp/">
 
 
 <script data-pjax class="page-configurations">
@@ -40,11 +47,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-TW'
   };
 </script>
-<title>歸檔 | Jimmy 的學習筆記</title>
+<title>PeopleSoft 使用 GnuPG | Jimmy 的學習筆記</title>
   
 
 
@@ -168,7 +175,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目錄
@@ -181,6 +188,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#PeopleCode"><span class="nav-number">1.</span> <span class="nav-text">PeopleCode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9DGnuPG"><span class="nav-number">2.</span> <span class="nav-text">安裝GnuPG</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8BPGP-Key"><span class="nav-number">3.</span> <span class="nav-text">建立PGP Key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%AF%E5%87%BAPublic-key"><span class="nav-number">4.</span> <span class="nav-text">匯出Public key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%AF%E5%85%A5Public-key"><span class="nav-number">5.</span> <span class="nav-text">匯入Public key</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -212,49 +220,132 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共有 7 篇文章。 繼續努力。</span>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://jmyhsieh.github.io/2021/01/psusepgp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jimmy Hsieh">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jimmy 的學習筆記">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          PeopleSoft 使用 GnuPG
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2021-01-13 20:46:25" itemprop="dateCreated datePublished" datetime="2021-01-13T20:46:25+08:00">2021-01-13</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-03-18 21:56:42" itemprop="dateModified" datetime="2021-03-18T21:56:42+08:00">2021-03-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/PeopleSoft/" itemprop="url" rel="index"><span itemprop="name">PeopleSoft</span></a>
+        </span>
+    </span>
+
+  
       </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>369</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="PeopleCode"><a href="#PeopleCode" class="headerlink" title="PeopleCode"></a>PeopleCode</h3><p>使用Exec使用指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&amp;ExitCode = Exec(&amp;commandline, %FilePath_Absolute);</span><br><span class="line">If &amp;ExitCode &lt;&gt; 0 Then</span><br><span class="line">   MessageBox(0, “”””, 0, 0, (“”Script was not Successful! Exit code returned by script was “” | &amp;ExitCode));</span><br><span class="line">End-If;</span><br></pre></td></tr></table></figure>
+
+<h3 id="安裝GnuPG"><a href="#安裝GnuPG" class="headerlink" title="安裝GnuPG"></a>安裝GnuPG</h3><p><a target="_blank" rel="noopener" href="https://gnupg.org/download/">Download</a> </p>
+<h3 id="建立PGP-Key"><a href="#建立PGP-Key" class="headerlink" title="建立PGP Key"></a>建立PGP Key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --full-generate-key」</span><br></pre></td></tr></table></figure>
+
+<h3 id="匯出Public-key"><a href="#匯出Public-key" class="headerlink" title="匯出Public key"></a>匯出Public key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --<span class="built_in">export</span> -a <span class="string">&quot;UserID&quot;</span> &gt; <span class="string">&quot;OutputFile&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="匯入Public-key"><a href="#匯入Public-key" class="headerlink" title="匯入Public key"></a>匯入Public key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --import <span class="string">&quot;InputFile&quot;</span></span><br></pre></td></tr></table></figure>
+
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-02-13T20:46:25+08:00"
-              content="2021-02-13">
-          02-13
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/02/pschangeportforwsh/" itemprop="url">
-            <span itemprop="name">PeopleSoft 調整 Tuxedo WSH Port 給 PeopleTools 3 tier 使用</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/PeopleSoft/" rel="tag"># PeopleSoft</a>
+              <a href="/tags/PGP/" rel="tag"># PGP</a>
+              <a href="/tags/GnuPG/" rel="tag"># GnuPG</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/05/weblogicdisableconsole/" rel="prev" title="WebLogic Console Disable/Path">
+                  <i class="fa fa-chevron-left"></i> WebLogic Console Disable/Path
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/02/pschangeportforwsh/" rel="next" title="PeopleSoft 調整 Tuxedo WSH Port 給 PeopleTools 3 tier 使用">
+                  PeopleSoft 調整 Tuxedo WSH Port 給 PeopleTools 3 tier 使用 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
 
 
 <script>

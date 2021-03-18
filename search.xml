@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>peoplesoft用Command啟動關閉服務</title>
-    <url>/2018/01/psadmincommand/</url>
-    <content><![CDATA[<h3 id="啟動-ap"><a href="#啟動-ap" class="headerlink" title="啟動 ap"></a>啟動 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c boot -d HRDEMO</span><br></pre></td></tr></table></figure>
-
-<h3 id="關閉-ap"><a href="#關閉-ap" class="headerlink" title="關閉 ap"></a>關閉 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c shutdown -d HRDEMO</span><br></pre></td></tr></table></figure>
-
-<h3 id="啟動-processes"><a href="#啟動-processes" class="headerlink" title="啟動 processes"></a>啟動 processes</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p start -d HRDEMOPSNT</span><br></pre></td></tr></table></figure>
-
-<h3 id="停止-processes"><a href="#停止-processes" class="headerlink" title="停止 processes"></a>停止 processes</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p stop -d HRDEMOPSNT</span><br></pre></td></tr></table></figure>
-
-<h3 id="強制關閉-ap"><a href="#強制關閉-ap" class="headerlink" title="強制關閉 ap"></a>強制關閉 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c shutdown! -d HRDEMO</span><br></pre></td></tr></table></figure>
-
-<h3 id="強制停止-process"><a href="#強制停止-process" class="headerlink" title="強制停止 process"></a>強制停止 process</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p <span class="built_in">kill</span>  -d HRDEMOPSNT </span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://docs.oracle.com/cd/E41633_01/pt853pbh1/eng/pt/tsvt/task_UsingthePSADMINCommand-LineInterface-c07e70.html">PSADMINCommand</a></p>
-]]></content>
-      <categories>
-        <category>PeopleSoft</category>
-      </categories>
-      <tags>
-        <tag>PeopleSoft</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PeopleSoft 調整 Tuxedo WSH Port 給 PeopleTools 3 tier 使用</title>
     <url>/2021/02/pschangeportforwsh/</url>
     <content><![CDATA[<h3 id="情境說明"><a href="#情境說明" class="headerlink" title="情境說明"></a>情境說明</h3><p>此次調整部分為下圖紅框，沒有進行調整時 Port 會是 WSL+1 區間，因為特殊目的調整 WSH Port</p>
@@ -55,6 +31,30 @@
 <li>搜尋「{HI_WSL_PORT}」調整「9005」</li>
 <li>執行「PSADMIN」&gt; AP 設定(會關閉服務) &gt; 重新讀取設定檔 &gt; 開啟服務</li>
 </ul>
+]]></content>
+      <categories>
+        <category>PeopleSoft</category>
+      </categories>
+      <tags>
+        <tag>PeopleSoft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>peoplesoft用Command啟動關閉服務</title>
+    <url>/2018/01/psadmincommand/</url>
+    <content><![CDATA[<h3 id="啟動-ap"><a href="#啟動-ap" class="headerlink" title="啟動 ap"></a>啟動 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c boot -d HRDEMO</span><br></pre></td></tr></table></figure>
+
+<h3 id="關閉-ap"><a href="#關閉-ap" class="headerlink" title="關閉 ap"></a>關閉 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c shutdown -d HRDEMO</span><br></pre></td></tr></table></figure>
+
+<h3 id="啟動-processes"><a href="#啟動-processes" class="headerlink" title="啟動 processes"></a>啟動 processes</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p start -d HRDEMOPSNT</span><br></pre></td></tr></table></figure>
+
+<h3 id="停止-processes"><a href="#停止-processes" class="headerlink" title="停止 processes"></a>停止 processes</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p stop -d HRDEMOPSNT</span><br></pre></td></tr></table></figure>
+
+<h3 id="強制關閉-ap"><a href="#強制關閉-ap" class="headerlink" title="強制關閉 ap"></a>強制關閉 ap</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -c shutdown! -d HRDEMO</span><br></pre></td></tr></table></figure>
+
+<h3 id="強制停止-process"><a href="#強制停止-process" class="headerlink" title="強制停止 process"></a>強制停止 process</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">psadmin -p <span class="built_in">kill</span>  -d HRDEMOPSNT </span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://docs.oracle.com/cd/E41633_01/pt853pbh1/eng/pt/tsvt/task_UsingthePSADMINCommand-LineInterface-c07e70.html">PSADMINCommand</a></p>
 ]]></content>
       <categories>
         <category>PeopleSoft</category>
@@ -136,6 +136,29 @@
       </categories>
       <tags>
         <tag>PeopleSoft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PeopleSoft 使用 GnuPG</title>
+    <url>/2021/01/psusepgp/</url>
+    <content><![CDATA[<h3 id="PeopleCode"><a href="#PeopleCode" class="headerlink" title="PeopleCode"></a>PeopleCode</h3><p>使用Exec使用指令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&amp;ExitCode = Exec(&amp;commandline, %FilePath_Absolute);</span><br><span class="line">If &amp;ExitCode &lt;&gt; 0 Then</span><br><span class="line">   MessageBox(0, “”””, 0, 0, (“”Script was not Successful! Exit code returned by script was “” | &amp;ExitCode));</span><br><span class="line">End-If;</span><br></pre></td></tr></table></figure>
+
+<h3 id="安裝GnuPG"><a href="#安裝GnuPG" class="headerlink" title="安裝GnuPG"></a>安裝GnuPG</h3><p><a href="https://gnupg.org/download/">Download</a> </p>
+<h3 id="建立PGP-Key"><a href="#建立PGP-Key" class="headerlink" title="建立PGP Key"></a>建立PGP Key</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpg --full-generate-key」</span><br></pre></td></tr></table></figure>
+
+<h3 id="匯出Public-key"><a href="#匯出Public-key" class="headerlink" title="匯出Public key"></a>匯出Public key</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpg --<span class="built_in">export</span> -a <span class="string">&quot;UserID&quot;</span> &gt; <span class="string">&quot;OutputFile&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="匯入Public-key"><a href="#匯入Public-key" class="headerlink" title="匯入Public key"></a>匯入Public key</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpg --import <span class="string">&quot;InputFile&quot;</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>PeopleSoft</category>
+      </categories>
+      <tags>
+        <tag>PeopleSoft</tag>
+        <tag>PGP</tag>
+        <tag>GnuPG</tag>
       </tags>
   </entry>
   <entry>
