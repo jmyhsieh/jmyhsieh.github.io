@@ -25,6 +25,45 @@
       </tags>
   </entry>
   <entry>
+    <title>PeopleSoft 調整 Tuxedo WSH Port 給 PeopleTools 3 tier 使用</title>
+    <url>/2021/02/pschangeportforwsh/</url>
+    <content><![CDATA[<h3 id="情境說明"><a href="#情境說明" class="headerlink" title="情境說明"></a>情境說明</h3><p>此次調整部分為下圖紅框，沒有進行調整時 Port 會是 WSL+1 區間，因為特殊目的調整 WSH Port</p>
+<img data-src="/2021/02/pschangeportforwsh/ptthreetier.jpg" class="">
+
+<h3 id="目標"><a href="#目標" class="headerlink" title="目標"></a>目標</h3><table>
+<thead>
+<tr>
+<th>#</th>
+<th align="right">調整前</th>
+<th align="right">調整後</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>WSL</td>
+<td align="right">7000</td>
+<td align="right">7000</td>
+</tr>
+<tr>
+<td>WSH</td>
+<td align="right">7001~7005</td>
+<td align="right">9001~9005</td>
+</tr>
+</tbody></table>
+<h3 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h3><ul>
+<li>開啟 PeopleSoft Tuxedo Template File(psappsrv.ubx)</li>
+<li>搜尋「{LO_WSL_PORT}」調整「9001」</li>
+<li>搜尋「{HI_WSL_PORT}」調整「9005」</li>
+<li>執行「PSADMIN」&gt; AP 設定(會關閉服務) &gt; 重新讀取設定檔 &gt; 開啟服務</li>
+</ul>
+]]></content>
+      <categories>
+        <category>PeopleSoft</category>
+      </categories>
+      <tags>
+        <tag>PeopleSoft</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PeopleSoft 使用 GnuPG</title>
     <url>/2021/01/psusepgp/</url>
     <content><![CDATA[<h3 id="PeopleCode"><a href="#PeopleCode" class="headerlink" title="PeopleCode"></a>PeopleCode</h3><p>Exec使用指令</p>
@@ -45,6 +84,31 @@
         <tag>PeopleSoft</tag>
         <tag>PGP</tag>
         <tag>GnuPG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WebLogic Password Decryptor(10.3.6)</title>
+    <url>/2018/03/weblogicpassworddecryptor/</url>
+    <content><![CDATA[<h2 id="準備檔案及資料"><a href="#準備檔案及資料" class="headerlink" title="準備檔案及資料"></a>準備檔案及資料</h2><h3 id="已加密過的字串"><a href="#已加密過的字串" class="headerlink" title="已加密過的字串"></a>已加密過的字串</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">\psoft\HCM891\HRDEMO\webserv\peoplesoft\config\config.xml</span><br></pre></td></tr></table></figure>
+
+<pre><code>&lt;tag-name&gt;node-manager-password-encrypted內容
+</code></pre>
+<h3 id="SerializedSystemIni-dat"><a href="#SerializedSystemIni-dat" class="headerlink" title="SerializedSystemIni.dat"></a>SerializedSystemIni.dat</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">\psoft\HCM891\HRDEMO\webserv\peoplesoft\security</span><br></pre></td></tr></table></figure>
+
+<h3 id="bcprov-jdk15on-156-jar"><a href="#bcprov-jdk15on-156-jar" class="headerlink" title="bcprov-jdk15on-156.jar"></a>bcprov-jdk15on-156.jar</h3><p>info: <a href="http://www.bouncycastle.org/">bcprov-jdk15on-156.jar</a></p>
+<h3 id="WebLogicPasswordDecryptor-相關程式"><a href="#WebLogicPasswordDecryptor-相關程式" class="headerlink" title="WebLogicPasswordDecryptor 相關程式"></a>WebLogicPasswordDecryptor 相關程式</h3><p>info: <a href="https://github.com/NetSPI/WebLogicPasswordDecryptor">WebLogicPasswordDecryptor</a></p>
+<h2 id="編譯"><a href="#編譯" class="headerlink" title="編譯"></a>編譯</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">javac -cp <span class="string">&quot;.;bcprov-jdk15on-156.jar&quot;</span> WebLogicPasswordDecryptor.java</span><br></pre></td></tr></table></figure>
+
+<h2 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java –cp “.;bcprov-jdk15on-156.jar” WebLogicPasswordDecryptor 「SerializedSystemIni.dat絕對路徑」 「加密後字串」</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://blog.netspi.com/decrypting-weblogic-passwords/">decrypting-weblogic-passwords/</a></p>
+]]></content>
+      <categories>
+        <category>WebLogic</category>
+      </categories>
+      <tags>
+        <tag>PeopleSoft</tag>
+        <tag>WebLogic</tag>
       </tags>
   </entry>
   <entry>
@@ -114,70 +178,6 @@
 <td>時間</td>
 </tr>
 </tbody></table>
-]]></content>
-      <categories>
-        <category>PeopleSoft</category>
-      </categories>
-      <tags>
-        <tag>PeopleSoft</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WebLogic Password Decryptor(10.3.6)</title>
-    <url>/2018/03/weblogicpassworddecryptor/</url>
-    <content><![CDATA[<h2 id="準備檔案及資料"><a href="#準備檔案及資料" class="headerlink" title="準備檔案及資料"></a>準備檔案及資料</h2><h3 id="已加密過的字串"><a href="#已加密過的字串" class="headerlink" title="已加密過的字串"></a>已加密過的字串</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">\psoft\HCM891\HRDEMO\webserv\peoplesoft\config\config.xml</span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;tag-name&gt;node-manager-password-encrypted內容
-</code></pre>
-<h3 id="SerializedSystemIni-dat"><a href="#SerializedSystemIni-dat" class="headerlink" title="SerializedSystemIni.dat"></a>SerializedSystemIni.dat</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">\psoft\HCM891\HRDEMO\webserv\peoplesoft\security</span><br></pre></td></tr></table></figure>
-
-<h3 id="bcprov-jdk15on-156-jar"><a href="#bcprov-jdk15on-156-jar" class="headerlink" title="bcprov-jdk15on-156.jar"></a>bcprov-jdk15on-156.jar</h3><p>info: <a href="http://www.bouncycastle.org/">bcprov-jdk15on-156.jar</a></p>
-<h3 id="WebLogicPasswordDecryptor-相關程式"><a href="#WebLogicPasswordDecryptor-相關程式" class="headerlink" title="WebLogicPasswordDecryptor 相關程式"></a>WebLogicPasswordDecryptor 相關程式</h3><p>info: <a href="https://github.com/NetSPI/WebLogicPasswordDecryptor">WebLogicPasswordDecryptor</a></p>
-<h2 id="編譯"><a href="#編譯" class="headerlink" title="編譯"></a>編譯</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">javac -cp <span class="string">&quot;.;bcprov-jdk15on-156.jar&quot;</span> WebLogicPasswordDecryptor.java</span><br></pre></td></tr></table></figure>
-
-<h2 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java –cp “.;bcprov-jdk15on-156.jar” WebLogicPasswordDecryptor 「SerializedSystemIni.dat絕對路徑」 「加密後字串」</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://blog.netspi.com/decrypting-weblogic-passwords/">decrypting-weblogic-passwords/</a></p>
-]]></content>
-      <categories>
-        <category>WebLogic</category>
-      </categories>
-      <tags>
-        <tag>PeopleSoft</tag>
-        <tag>WebLogic</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PeopleSoft 調整 Tuxedo WSH Port 給 PeopleTools 3 tier 使用</title>
-    <url>/2021/02/pschangeportforwsh/</url>
-    <content><![CDATA[<h3 id="情境說明"><a href="#情境說明" class="headerlink" title="情境說明"></a>情境說明</h3><p>此次調整部分為下圖紅框，沒有進行調整時 Port 會是 WSL+1 區間，因為特殊目的調整 WSH Port</p>
-<img data-src="/2021/02/pschangeportforwsh/ptthreetier.jpg" class="">
-
-<h3 id="目標"><a href="#目標" class="headerlink" title="目標"></a>目標</h3><table>
-<thead>
-<tr>
-<th>#</th>
-<th align="right">調整前</th>
-<th align="right">調整後</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>WSL</td>
-<td align="right">7000</td>
-<td align="right">7000</td>
-</tr>
-<tr>
-<td>WSH</td>
-<td align="right">7001~7005</td>
-<td align="right">9001~9005</td>
-</tr>
-</tbody></table>
-<h3 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h3><ul>
-<li>開啟 PeopleSoft Tuxedo Template File(psappsrv.ubx)</li>
-<li>搜尋「{LO_WSL_PORT}」調整「9001」</li>
-<li>搜尋「{HI_WSL_PORT}」調整「9005」</li>
-<li>執行「PSADMIN」&gt; AP 設定(會關閉服務) &gt; 重新讀取設定檔 &gt; 開啟服務</li>
-</ul>
 ]]></content>
       <categories>
         <category>PeopleSoft</category>
